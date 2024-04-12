@@ -1,0 +1,14 @@
+// 参考：https://zenn.dev/forcia_tech/articles/20201220_advent_calendar
+
+// for Next custom-server
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "esnext",
+    "noEmit": false,
+	},
+  "include": ["./server"]
+  
+}
+
