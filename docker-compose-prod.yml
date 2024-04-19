@@ -1,18 +1,18 @@
 services:
   nextjs:
     build:
-      dockerfile: ./Dockerfile.nextjs
+      dockerfile: ./Dockerfile.nextjs.prod
     container_name: nextjs
     ports:
       - 3000:3000
-#  database:
-#    image: mysql:8.3.0
-#    container_name: database
-#    environment:
-#      MYSQL_ROOT_PASSWORD: mysqlrootpassword
-#      MYSQL_USER: user
-#      MYSQL_PASSWORD: password
-#      MYSQL_DATABASE: database
+  database:
+    image: mysql:8.3.0
+    container_name: database
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlrootpassword
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: database
 
 networks:
   default:
